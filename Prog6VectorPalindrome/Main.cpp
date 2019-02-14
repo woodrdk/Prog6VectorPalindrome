@@ -7,8 +7,11 @@
 #include <iomanip>
 #include <vector>
 #include <cstdlib>
+
 using namespace std;
+
 bool isPalindrome(const vector<int> & v);
+
 int main() {
 	vector<int> v1False{ 1, 2, 3, 4, 1 };
 	cout << boolalpha << isPalindrome(v1False) << endl;
@@ -21,6 +24,7 @@ int main() {
 	system("pause");
 	return 0;
 }
+
 bool isPalindrome(const vector<int> & v) {
 	auto front = v.begin(); // first element of v.
 	auto rear = --v.end(); // last element of v.
@@ -31,7 +35,9 @@ bool isPalindrome(const vector<int> & v) {
 	// as long as front and rear elements have the same value
 	// and front hasn't gone past rear, increment both.
 	for (; *front == *rear && front < rear; ++front, --rear) {
+
 	}
+	
 	// check positions of front and rear.
 	// if there is a mismatch, it will happen
 	// before front passes rear.
